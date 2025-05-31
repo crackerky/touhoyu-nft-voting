@@ -18,7 +18,8 @@ export async function checkNFTOwnership(walletAddress: string): Promise<NFTData 
     }
 
     // Get all assets in the wallet
-    const response = await fetch(`${blockfrostBaseUrl}/addresses/${walletAddress}`, n      headers: {
+    const response = await fetch(`${blockfrostBaseUrl}/addresses/${walletAddress}`, {
+      headers: {
         'project_id': blockfrostApiKey,
         'Content-Type': 'application/json'
       }
